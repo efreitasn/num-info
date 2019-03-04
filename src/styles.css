@@ -1,0 +1,29 @@
+/* Variables */
+:root {
+  /* Colors */
+  --body-bg-color: #E8E8E8;
+  --main-box-bg-color: #FFFFFF;
+  /* Sizes */
+  --size-1: .5rem;
+  --size-2: calc(2 * var(--size-1));
+  --size-3: calc(3 * var(--size-1));
+  --size-4: calc(4 * var(--size-1));
+  --root-font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Global styles */
+body,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--root-font-size);
+}
+
+body {
+  background: var(--body-bg-color);
+  font-size: 1.6rem;
+}

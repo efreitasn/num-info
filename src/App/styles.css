@@ -1,0 +1,10 @@
+.app {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.main-box {
+  background: var(--main-box-bg-color);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.08);
+  padding: var(--size-2);
+}

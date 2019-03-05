@@ -1,15 +1,13 @@
 import React from 'react';
+import Header from '../Header';
+import MainBox from '../MainBox';
 import './styles.css';
 
 export default function App() {
   return (
     <main className="app">
-      <header>
-        <h1>hooksTodo</h1>
-      </header>
-      <div className="main-box">
-        the-content
-      </div>
+      <Header />
+      <MainBox />
     </main>
   );
 }

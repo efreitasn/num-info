@@ -1,0 +1,15 @@
+.main-box-header__input {
+  border: 0;
+  border-bottom: 1px solid var(--color-body-bg);
+  color: var(--color-black);
+  font-size: 2rem;
+  font-family: 'Roboto';
+  padding: var(--size-3) var(--size-4);
+  transition: .2s background-color ease;
+  width: 100%;
+}
+
+.main-box-header__input:focus {
+  background-color: var(--color-grey-2);
+  outline: none;
+}

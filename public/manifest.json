@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Space hooks",
+  "name": "Getting to know the space by using react hooks.",
   "icons": [
     {
       "src": "favicon.ico",

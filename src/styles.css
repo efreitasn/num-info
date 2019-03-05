@@ -1,20 +1,30 @@
 /* Variables */
 :root {
   /* Colors */
-  --body-bg-color: #E8E8E8;
-  --main-box-bg-color: #FFFFFF;
+  --color-grey-1: #E8E8E8;
+  --color-grey-2: #EFEFEF;
+  --color-black: #2B2B2B;
+  --color-white: #FFFFFF;
+  --color-body-bg: var(--color-grey-1);
+  --color-main-box-bg: var(--color-white);
   /* Sizes */
   --size-1: .5rem;
   --size-2: calc(2 * var(--size-1));
   --size-3: calc(3 * var(--size-1));
   --size-4: calc(4 * var(--size-1));
+  --app-margin-size: 2rem;
   --root-font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Global styles */
 body,
 p,
-h1 {
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +34,7 @@ html {
 }
 
 body {
-  background: var(--body-bg-color);
+  background: var(--color-body-bg);
   font-size: 1.6rem;
+  font-family: 'Roboto';
 }

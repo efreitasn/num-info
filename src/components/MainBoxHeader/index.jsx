@@ -10,9 +10,14 @@ import useInputChange from '../../hooks/useInputChange';
 import useWasEnterPressed from '../../hooks/useWasEnterPressed';
 import useDispatch from '../../hooks/useDispatch';
 
+const isValidInputValue = value => value === '' || value.match(/^[0-9]+$/g);
+
 export default function MainBoxInput() {
   const dispatch = useDispatch();
-  const [inputValue, onInputChange] = useInputChange('3');
+  const [inputValue, onInputChange] = useInputChange(
+    '3',
+    isValidInputValue
+  );
   const [wasEnterPressed, onInputKeyPress] = useWasEnterPressed();
   const [debouncedValue, stopDebounce] = useDebounce(inputValue, 500);
   const setInfo = useCallback(
@@ -71,12 +76,13 @@ export default function MainBoxInput() {
   );
 
   return (
-    <input
-      type="number"
-      className="main-box-header__input"
-      value={inputValue}
-      onKeyPress={onInputKeyPress}
-      onChange={onInputChange}
-    />
+    <div className="main-box-section">
+      <input
+        className="main-box-header__input"
+        value={inputValue}
+        onKeyPress={onInputKeyPress}
+        onChange={onInputChange}
+      />
+    </div>
   );
 }

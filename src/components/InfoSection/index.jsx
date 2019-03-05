@@ -13,7 +13,7 @@ export default function InfoSection({
   description
 }) {
   return (
-    <div className={`info-section info-section--${type}`}>
+    <div className={`main-box-section info-section info-section--${type}`}>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>

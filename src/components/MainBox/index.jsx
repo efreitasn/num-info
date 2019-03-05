@@ -52,8 +52,8 @@ export default function MainBox() {
 
   return (
     <dispatchContext.Provider value={dispatch}>
+      <MainBoxHeader />
       <div className="main-box">
-        <MainBoxHeader />
         <div className="main-box__content">
           {isCleared && (
             <div>type something to see ya</div>

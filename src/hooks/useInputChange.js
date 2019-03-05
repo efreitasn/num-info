@@ -3,11 +3,20 @@ import {
   useCallback
 } from 'react';
 
-export default function useInputChange(initialValue) {
+export default function useInputChange(initialValue, isValidValueFn) {
   const [value, setValue] = useState(initialValue);
   const onInputChange = useCallback(
-    ({ target }) => setValue(target.value),
-    [setValue]
+    ({ target }) => {
+      if (isValidValueFn && isValidValueFn(target.value)) {
+        setValue(target.value);
+      } else if (!isValidValueFn) {
+        setValue(target.value);
+      }
+    },
+    [
+      setValue,
+      isValidValueFn
+    ]
   );
 
   return [

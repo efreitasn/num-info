@@ -1,5 +1,19 @@
 .main-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 4rem;
   font-weight: 700;
   padding: var(--size-2);
   text-align: center;
+}
+
+.main-title__num {
+  color: var(--color-trivia);
+}
+
+.main-title__in {
+  color: var(--color-year);
+}
+
+.main-title__fo {
+  color: var(--color-math);
 }

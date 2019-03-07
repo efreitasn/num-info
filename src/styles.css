@@ -3,10 +3,14 @@
   /* Colors */
   --color-grey-1: #E8E8E8;
   --color-grey-2: #EFEFEF;
+  --color-grey-3: #5F5F5F;
   --color-black: #2B2B2B;
   --color-white: #FFFFFF;
   --color-body-bg: var(--color-grey-1);
   --color-main-box-bg: var(--color-white);
+  --color-trivia: #226182;
+  --color-year:#176152;
+  --color-math: #6F6C4D;
   /* Sizes */
   --size-1: .5rem;
   --size-2: calc(2 * var(--size-1));

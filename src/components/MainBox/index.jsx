@@ -3,6 +3,8 @@ import './styles.css';
 import MainBoxHeader from '../MainBoxHeader';
 import { dispatchContext } from '../../hooks/useDispatch';
 import InfoSection from '../InfoSection';
+import MainBoxSection from '../MainBoxSection';
+import SpinnerIcon from '../SpinnerIcon';
 
 const initialState = {
   error: null,
@@ -52,40 +54,46 @@ export default function MainBox() {
 
   return (
     <dispatchContext.Provider value={dispatch}>
-      <MainBoxHeader />
-      <div className="main-box">
-        <div className="main-box__content">
-          {isCleared && (
-            <div>type something to see ya</div>
-          )}
-          {loading && (
-            <p>Loading</p>
-          )}
-          {!loading && !isCleared && !triviaInfo && !yearInfo && !mathInfo && (
-            <p>That's a very awkward number.</p>
-          )}
-          {triviaInfo && (
+      <div>
+        <MainBoxHeader />
+        {isCleared && (
+          <div>type something to see ya</div>
+        )}
+        {loading && (
+          <div className="spinner-icon-wrapper">
+            <SpinnerIcon />
+          </div>
+        )}
+        {!loading && !isCleared && !triviaInfo && !yearInfo && !mathInfo && (
+          <p>That's a very awkward number.</p>
+        )}
+        {triviaInfo && (
+          <MainBoxSection>
             <InfoSection
               title="Trivia"
               type="trivia"
               description={triviaInfo}
             />
-          )}
-          {yearInfo && (
+          </MainBoxSection>
+        )}
+        {yearInfo && (
+          <MainBoxSection>
             <InfoSection
               title="Year"
               type="year"
               description={yearInfo}
             />
-          )}
-          {mathInfo && (
+          </MainBoxSection>
+        )}
+        {mathInfo && (
+          <MainBoxSection>
             <InfoSection
               title="Math"
               type="math"
               description={mathInfo}
             />
-          )}
-        </div>
+          </MainBoxSection>
+        )}
       </div>
     </dispatchContext.Provider>
   );

@@ -1,15 +1,4 @@
-.main-box {
-  /* background: var(--color-main-box-bg); */
-  /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04);
-  border-radius: 5px; */
-}
-
-.main-box__content {
-  /* padding: var(--size-4); */
-}
-
-.main-box-section {
-  background: var(--color-main-box-bg);
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.06);
-  margin-bottom: 2rem;
+.spinner-icon-wrapper {
+  margin-top: 1rem;
+  text-align: center;
 }

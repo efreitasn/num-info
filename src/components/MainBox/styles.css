@@ -1,4 +1,9 @@
-.spinner-icon-wrapper {
+.main-box-center-wrapper {
   margin-top: 1rem;
   text-align: center;
+}
+
+.main-box-error-message {
+  color: red;
+  font-size: 1.6rem;
 }

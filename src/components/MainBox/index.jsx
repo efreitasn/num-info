@@ -7,20 +7,20 @@ import MainBoxSection from '../MainBoxSection';
 import SpinnerIcon from '../SpinnerIcon';
 
 const initialState = {
-  error: null,
   triviaInfo: null,
   mathInfo: null,
   yearInfo: null,
+  hasError: false,
   loading: false,
-  isCleared: true
+  notFound: false
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'SET_ERROR':
+    case 'SET_HAS_ERROR':
       return {
         ...state,
-        error: action.error
+        hasError: action.hasError
       };
     case 'SET_INFO':
       return {
@@ -28,12 +28,12 @@ function reducer(state, action) {
         triviaInfo: action.triviaInfo,
         yearInfo: action.yearInfo,
         mathInfo: action.mathInfo,
+        notFound: !action.triviaInfo && !action.yearInfo && !action.mathInfo,
         loading: false
       };
     case 'START_LOADING':
       return {
         ...initialState,
-        isCleared: false,
         loading: true
       };
     case 'SET_TO_DEFAULT':
@@ -49,22 +49,27 @@ export default function MainBox() {
     yearInfo,
     mathInfo,
     loading,
-    isCleared
+    notFound,
+    hasError
   }, dispatch] = useReducer(reducer, initialState);
 
   return (
     <dispatchContext.Provider value={dispatch}>
       <div>
         <MainBoxHeader />
-        {isCleared && (
-          <div>type something to see ya</div>
+        {hasError && (
+          <div className="main-box-center-wrapper">
+            <p className="main-box-error-message">
+              An error happened while trying to get the info.
+            </p>
+          </div>
         )}
         {loading && (
-          <div className="spinner-icon-wrapper">
+          <div className="main-box-center-wrapper">
             <SpinnerIcon />
           </div>
         )}
-        {!loading && !isCleared && !triviaInfo && !yearInfo && !mathInfo && (
+        {notFound && (
           <p>That's a very awkward number.</p>
         )}
         {triviaInfo && (

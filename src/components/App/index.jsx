@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../Header';
-import MainBox from '../MainBox';
+import MainContent from '../MainContent';
 import './styles.css';
 
 export default function App() {
   return (
-    <main className="app">
+    <div className="app">
       <Header />
-      <MainBox />
-    </main>
+      <MainContent />
+    </div>
   );
 }

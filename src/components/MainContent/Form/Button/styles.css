@@ -1,0 +1,39 @@
+@keyframes mainContentFormButton {
+  0% {
+    background-color: var(--color-green-1);
+    border-color: var(--color-green-1-dark);
+  }
+  
+  50% {
+    background-color: var(--color-green-2);
+    border-color: var(--color-green-2-dark);
+  }
+
+  100% {
+    background-color: var(--color-green-1);
+    border-color: var(--color-green-1-dark);
+  }
+}
+
+.main-content-form-button {
+  animation: mainContentFormButton 2s linear infinite;
+  border: 0;
+  border-bottom: 6px solid;
+  color: white;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.main-content-form-button:hover,
+.main-content-form-button:focus {
+  outline: none;
+}
+
+.main-content-form-button:active {
+  border-bottom: 0;
+  border-top: 6px solid;
+}

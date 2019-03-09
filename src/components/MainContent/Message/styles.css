@@ -1,0 +1,12 @@
+.main-content-message {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.main-content-message--error {
+  color: var(--color-red);
+}
+
+.main-content-message--not-found {
+  color: var(--color-grey-4);
+}

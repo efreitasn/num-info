@@ -3,7 +3,7 @@ import './styles.css';
 
 export default function Header() {
   return (
-    <header>
+    <header className="main-header">
       <h1 className="main-title">
         <span className="main-title__num">num</span>
         <span className="main-title__in">In</span>

@@ -1,17 +1,14 @@
-export const getNumberInfo = (
+export const getNumberInfo = async (
   number,
-  type, // year || trivia || math
+  type // year | trivia | math
 ) => {
-  const defaultMessage = `No ${type === 'trivia' ? 'trivia' : `${type} info`} about this number :(`;
+  const res = await fetch(`http://numbersapi.com/${number}/${type}?json`);
 
-  return fetch(`http://numbersapi.com/${number}/${type}?default=${defaultMessage}&json`)
-    .then(res => res.json())
+  return res.json();
 };
 
-export const getNumberInfoAllTypes = number => {
-  return Promise.all([
-    getNumberInfo(number, 'trivia'),
-    getNumberInfo(number, 'year'),
-    getNumberInfo(number, 'math')
-  ]);
-};
+export const getNumberInfoAllTypes = number => Promise.all([
+  getNumberInfo(number, 'trivia'),
+  getNumberInfo(number, 'year'),
+  getNumberInfo(number, 'math')
+]);

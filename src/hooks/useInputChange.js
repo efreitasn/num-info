@@ -21,7 +21,6 @@ export default function useInputChange(initialValue, isValidValueFn) {
 
   return [
     value,
-    onInputChange,
-    setValue
+    onInputChange
   ];
 }

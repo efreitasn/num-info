@@ -1,40 +1,40 @@
-.info-section > h2 {
+.main-content-info-box > h2 {
   border-left: 5px solid;
   font-size: 1.8rem;
   font-weight: 700;
   padding: var(--size-2) var(--size-3);
 }
 
-.info-section > p {
-  color: var(--color-grey-3);
+.main-content-info-box > p {
   background: rgba(0, 0, 0, 0.05);
+  color: var(--color-grey-4);
   line-height: 1.5;
   padding: var(--size-4);
 }
 
 /* Trivia */
-.info-section--trivia {
+.main-content-info-box--trivia {
   border-left-color: var(--color-trivia);
 }
 
-.info-section--trivia > h2 {
+.main-content-info-box--trivia > h2 {
   color: var(--color-trivia);
 }
 
 /* Year */
-.info-section--year {
+.main-content-info-box--year {
   border-left-color: var(--color-year);
 }
 
-.info-section--year > h2 {
+.main-content-info-box--year > h2 {
   color: var(--color-year);
 }
 
 /* Math */
-.info-section--math {
+.main-content-info-box--math {
   border-left-color: var(--color-math);
 }
 
-.info-section--math > h2 {
+.main-content-info-box--math > h2 {
   color: var(--color-math);
 }

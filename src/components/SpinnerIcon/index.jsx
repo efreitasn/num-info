@@ -1,4 +1,4 @@
-// Icomoon spinner icon
+// SVG from icomoon spinner icon
 import React from 'react';
 import './styles.css';
 

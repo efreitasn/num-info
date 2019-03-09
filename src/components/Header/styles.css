@@ -1,8 +1,11 @@
+.main-header {
+  margin-bottom: var(--size-4);
+}
+
 .main-title {
   font-family: 'Ubuntu', sans-serif;
   font-size: 4rem;
   font-weight: 700;
-  padding: var(--size-2);
   text-align: center;
 }
 

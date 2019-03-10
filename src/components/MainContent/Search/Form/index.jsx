@@ -9,24 +9,19 @@ import MainContentSection from '../../Section';
 import useInputChange from '../../../../hooks/useInputChange';
 import useGetNumberInfo from '../../../../hooks/useGetNumberInfo';
 import useSearchState from '../../../../hooks/useSearchState';
-import useSearchDispatch from '../../../../hooks/useSearchDispatch';
 import './styles.css';
 
 const isValidInputValue = value => value === '' || value.match(/^[0-9]+$/g);
 
 export default function MainContentSearchForm() {
   const formInputRef = useRef(null);
-  const searchDispatch = useSearchDispatch();
   const getNumberInfo = useGetNumberInfo();
   const [
     inputValue,
     onInputChange,
     setInputValue
   ] = useInputChange('', isValidInputValue)
-  const {
-    currentValue,
-    focusInput
-  } = useSearchState();
+  const { currentValue } = useSearchState();
   const submitValue = useCallback(
     async e => {
       e.preventDefault();
@@ -40,21 +35,6 @@ export default function MainContentSearchForm() {
     () => setInputValue(currentValue),
     [currentValue]
   );
-
-  useEffect(
-    () => {
-      if (focusInput) {
-        formInputRef.current.focus();
-        searchDispatch({
-          type: 'REMOVE_FOCUS_INPUT'
-        })
-      }
-    },
-    [
-      focusInput,
-      formInputRef
-    ]
-  )
 
   useEffect(
     () => formInputRef.current.focus(),

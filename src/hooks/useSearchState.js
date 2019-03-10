@@ -5,7 +5,6 @@ import {
 
 export const initialSearchState = {
   currentValue: '',
-  focusInput: false,
   recentSearches: []
 };
 

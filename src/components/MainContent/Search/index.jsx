@@ -3,7 +3,7 @@ import React, {
   useEffect
 } from 'react';
 import MainContentSearchForm from './Form';
-import MainContentSearchRecent from './RecentSearches';
+import MainContentSearchRecent from './Recent';
 import { searchDispatchContext } from '../../../hooks/useSearchDispatch';
 import {
   searchStateContext,
@@ -38,18 +38,12 @@ function reducer(state, action) {
       return {
         ...state,
         currentValue: action.currentValue,
-        recentSearches,
-        focusInput: true
+        recentSearches
       };
     case 'SET_RECENT_SEARCHES':
       return {
         ...state,
         recentSearches: action.recentSearches
-      };
-    case 'REMOVE_FOCUS_INPUT':
-      return {
-        ...state,
-        focusInput: false
       };
     default:
       return state;

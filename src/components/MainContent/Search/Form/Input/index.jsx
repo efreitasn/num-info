@@ -1,27 +1,29 @@
 import React, {
   useRef,
-  useEffect
+  useImperativeHandle,
+  forwardRef
 } from 'react';
 import './styles.css';
 
-export default function MainContentFormInput({
+function MainContentSearchFormInput({
   onChange,
   value
-}) {
+}, ref) {
   const inputEl = useRef(null);
 
-  useEffect(
-    () => {
-      if (inputEl.current) {
+  useImperativeHandle(
+    ref,
+    () => ({
+      focus: () => {
         inputEl.current.focus();
       }
-    },
+    }),
     [inputEl]
   );
 
   return (
     <input
-      className="main-content-form-input"
+      className="main-content-search-form-input"
       value={value}
       placeholder="type a number"
       onChange={onChange}
@@ -29,3 +31,5 @@ export default function MainContentFormInput({
     />
   )
 }
+
+export default forwardRef(MainContentSearchFormInput);

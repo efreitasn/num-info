@@ -14,13 +14,13 @@ export default function useInputChange(initialValue, isValidValueFn) {
       }
     },
     [
-      setValue,
       isValidValueFn
     ]
   );
 
   return [
     value,
-    onInputChange
+    onInputChange,
+    setValue
   ];
 }

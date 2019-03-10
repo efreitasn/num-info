@@ -1,4 +1,5 @@
-.main-content-form-input {
+.main-content-search-form-input {
+  background-color: var(--color-white);
   border: 0;
   color: var(--color-black);
   font-family: 'Roboto';
@@ -7,11 +8,11 @@
   width: 100%;
 }
 
-.main-content-form-input:focus {
+.main-content-search-form-input:focus {
   outline: none;
 }
 
-.main-content-form-input::placeholder {
+.main-content-search-form-input::placeholder {
   color: var(--color-grey-3);
   font-family: 'Ubuntu', sans-serif;
 }

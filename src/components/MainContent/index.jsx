@@ -1,25 +1,17 @@
 import React, { useReducer } from 'react';
-import { dispatchContext } from '../../hooks/useDispatch';
-import MainContentForm from './Form';
+import { mainDispatchContext } from '../../hooks/useMainDispatch';
+import { initialMainState } from '../../hooks/useMainState';
+import MainContentSearch from './Search';
 import MainContentInfoBox from './InfoBox';
 import MainContentMessage from './Message';
 import MainContentLoading from './Loading';
 import './styles.css';
 
-const initialState = {
-  triviaInfo: null,
-  mathInfo: null,
-  yearInfo: null,
-  hasError: false,
-  loading: false,
-  notFound: false
-};
-
 function reducer(state, action) {
   switch (action.type) {
     case 'START_LOADING':
       return {
-        ...initialState,
+        ...initialMainState,
         loading: true
       };
     case 'SET_INFO':
@@ -50,12 +42,12 @@ export default function MainContent() {
     loading,
     notFound,
     hasError
-  }, dispatch] = useReducer(reducer, initialState);
+  }, dispatch] = useReducer(reducer, initialMainState);
 
   return (
-    <dispatchContext.Provider value={dispatch}>
+    <mainDispatchContext.Provider value={dispatch}>
       <main>
-        <MainContentForm />
+        <MainContentSearch />
         {loading && (
           <MainContentLoading />
         )}
@@ -88,6 +80,6 @@ export default function MainContent() {
           />
         )}
       </main>
-    </dispatchContext.Provider>
+    </mainDispatchContext.Provider>
   );
 }

@@ -2,3 +2,9 @@
   margin: var(--app-margin-size) auto;
   width: 50%;
 }
+
+@media (max-width: 780px) {
+  .app {
+    width: 90%;
+  }
+}

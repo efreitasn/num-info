@@ -5,7 +5,7 @@ import './styles.css';
 
 export default function MainContentLoading() {
   return (
-    <MainContentSection transparent>
+    <MainContentSection noShadow>
       <div className="main-content-loading">
         <SpinnerIcon />
       </div>

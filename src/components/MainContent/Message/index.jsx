@@ -13,7 +13,7 @@ export default function MainContentMessage({
   switch (type) {
     case 'not-found':
       return (
-        <MainContentSection transparent>
+        <MainContentSection noShadow>
           <p className="main-content-message main-content-message--not-found">
             There's no info related to that number ;(
           </p>
@@ -21,7 +21,7 @@ export default function MainContentMessage({
       );
     case 'error':
       return (
-        <MainContentSection transparent>
+        <MainContentSection noShadow>
           <p className="main-content-message main-content-message--error">
             An error happened while trying to get the info.
           </p>

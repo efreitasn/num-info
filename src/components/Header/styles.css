@@ -1,22 +1,22 @@
-.main-header {
+.header {
   margin-bottom: var(--size-4);
 }
 
-.main-title {
+.header-title {
   font-family: 'Ubuntu', sans-serif;
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
 }
 
-.main-title__num {
+.header-title__num {
   color: var(--color-trivia);
 }
 
-.main-title__in {
+.header-title__in {
   color: var(--color-year);
 }
 
-.main-title__fo {
+.header-title__fo {
   color: var(--color-math);
 }

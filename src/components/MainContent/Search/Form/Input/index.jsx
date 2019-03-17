@@ -18,7 +18,7 @@ function MainContentSearchFormInput({
         inputEl.current.focus();
       }
     }),
-    [inputEl]
+    []
   );
 
   return (

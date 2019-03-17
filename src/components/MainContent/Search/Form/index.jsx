@@ -38,7 +38,7 @@ export default function MainContentSearchForm() {
 
   useEffect(
     () => formInputRef.current.focus(),
-    [formInputRef]
+    []
   );
 
   return (

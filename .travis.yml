@@ -1,12 +1,12 @@
 language: node_js
 node_js:
   - node
-cache: npm
+cache:
+  yarn: true
 branches:
   only:
     - master
-build:
-  - npm run build
+script: yarn build
 deploy:
   provider: pages
   local-dir: build

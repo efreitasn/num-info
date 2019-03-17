@@ -1,6 +1,7 @@
 import React, {
   useReducer,
-  useEffect
+  useEffect,
+  useCallback
 } from 'react';
 import MainContentSearchForm from './Form';
 import MainContentSearchRecent from './Recent';
@@ -52,6 +53,15 @@ function reducer(state, action) {
 
 export default function MainContentSearch() {
   const [state, dispatch] = useReducer(reducer, initialSearchState);
+  const clearRecentSearches = useCallback(
+    () => {
+      dispatch({
+        type: 'SET_RECENT_SEARCHES',
+        recentSearches: []
+      });
+    },
+    [dispatch]
+  );
 
   useEffect(
     () => {
@@ -78,7 +88,7 @@ export default function MainContentSearch() {
     <searchDispatchContext.Provider value={dispatch}>
       <searchStateContext.Provider value={state}>
         <MainContentSearchForm />
-        <MainContentSearchRecent />
+        <MainContentSearchRecent clearRecentSearches={clearRecentSearches} />
       </searchStateContext.Provider>
     </searchDispatchContext.Provider>
   );

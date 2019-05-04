@@ -2,7 +2,12 @@
   "name": "num-info",
   "version": "0.1.0",
   "homepage": "https://efreitasn.github.io/num-info",
-  "private": true,
+  "author": {
+    "name": "Emanuel Freitas",
+    "email": "me@efreitasn.dev",
+    "url": "https://efreitas.dev"
+  },
+  "license": "MIT",
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

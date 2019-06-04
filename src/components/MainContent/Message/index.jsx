@@ -15,7 +15,7 @@ export default function MainContentMessage({
       return (
         <MainContentSection noShadow>
           <p className="main-content-message main-content-message--not-found">
-            There's no info related to that number ;(
+            There's no info related to this number ;(
           </p>
         </MainContentSection>
       );

@@ -24,6 +24,6 @@
 
 ---
 
-This is a simple react app that I built to check out the new hooks API that shipped in [`react@16.8`](https://www.npmjs.com/package/react). It uses the [numbers API](http://numbersapi.com) proxied through a Node.js server hosted on heroku. The proxy exists as the API uses `http` while the app is hosted on a `https` host ([mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content)). Besides, I also added a couple of e2e tests to check out [cypress](https://www.cypress.io/) as well. You can view it [here](https://efreitasn.github.io/num-info)
+This is a simple react app that I built to check out the new hooks API that shipped in [`react@16.8`](https://www.npmjs.com/package/react). It uses the [numbers API](http://numbersapi.com) proxied through a Node.js server hosted on heroku. The proxy exists as the API uses `http` while the app is hosted on a `https` host ([mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content)). Besides, I also added a couple of e2e tests to check out [cypress](https://www.cypress.io/) as well. You can view it [here](https://efreitasn.github.io/num-info).
 
 This was bootstrapped using [Create React App](https://facebook.github.io/create-react-app).

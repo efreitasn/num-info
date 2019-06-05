@@ -8,7 +8,7 @@ branches:
     - master
 script:
   - yarn build
-after_script:
+after_success:
   - yarn start-int-tests-server
   - yarn test-e2e
 deploy:

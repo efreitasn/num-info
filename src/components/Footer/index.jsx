@@ -10,7 +10,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >Github</a>
-      <span class="footer-separator">/</span>
+      <span className="footer-separator">/</span>
       <a
         className="footer-link"
         href="https://efreitasn.dev"

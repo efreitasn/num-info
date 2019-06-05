@@ -6,7 +6,11 @@ cache:
 branches:
   only:
     - master
-script: yarn build
+script:
+  - yarn build
+after_script:
+  - yarn start-int-tests-server
+  - yarn test-e2e
 deploy:
   provider: pages
   local-dir: build

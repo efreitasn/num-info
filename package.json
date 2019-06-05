@@ -7,6 +7,9 @@
     "email": "me@efreitasn.dev",
     "url": "https://efreitas.dev"
   },
+  "engines": {
+    "node": "^10.16.0"
+  },
   "license": "MIT",
   "dependencies": {
     "react": "^16.8.3",
